@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="416dp"
+        android:layout_height="678dp"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar_bottom_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/navigation_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header">
+
+                <TextView
+                    android:id="@+id/hi_milan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Hi, Milan"
+                    android:textColor="@color/AliceBlue"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Wanna fill your trolley?🥳"
+                    android:textColor="@color/LightGrey"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/hi_milan"
+                    app:layout_constraintTop_toBottomOf="@+id/hi_milan" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="41dp"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/rounded_profile_picture" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/promo_section"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/promo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="141dp"
+                    android:layout_marginTop="63dp"
+                    android:layout_marginEnd="142dp"
+                    android:layout_marginBottom="63dp"
+                    android:src="@drawable/promo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                app:layout_constraintTop_toBottomOf="@id/promo_section">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_perabot"
+                    android:layout_width="126dp"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:outlineAmbientShadowColor="@color/BlackGood"
+                    app:contentPadding="16dp"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_category_perabot"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:src="@drawable/bibimbap" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="8dp"
+                            android:lines="2"
+                            android:text="Perabot"
+                            android:textAlignment="center"
+                            android:textColor="@color/BlackGood"
+                            android:textSize="20dp"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_category_perabot"
+                            tools:layout_editor_absoluteX="-16dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nav_bar_bottom_section"
+        android:layout_width="410dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_section"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom=""
+                tools:layout_editor_absoluteY="357dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/nav_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/windowBackground"
+                    app:menu="@menu/bottom_nav_menu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
